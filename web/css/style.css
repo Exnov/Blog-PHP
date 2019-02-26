@@ -1,0 +1,526 @@
+/*
+-------------------------------------------------------------------------------------
+1-FONT PERSONNALISEES
+2-COMMUN
+3-PAGE ACCUEIL
+4-PAGINATION ARTICLES, TABLEAU ARTICLES, TABLEAU COMMENTAIRES
+5-PAGES ARTICLE ET A PROPOS
+6-PAGE A PROPOS
+7-PAGES CREATION, EDITION ARTICLE, COMMENTAIRE
+8-FOOTER
+9-BREAKPOINTS
+-------------------------------------------------------------------------------------
+*/
+
+
+/*
+-------------------------------------------------------------------------------------
+1-FONT PERSONNALISEES
+-------------------------------------------------------------------------------------
+*/
+
+@font-face {
+    font-family: 'black_jackregular';
+    src: url('../fonts/blackjack/blackjack-webfont.eot');
+    src: url('../fonts/blackjack/blackjack-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/blackjack/blackjack-webfont.woff') format('woff'),
+         url('../fonts/blackjack/blackjack-webfont.ttf') format('truetype'),
+         url('../fonts/blackjack/blackjack-webfont.svg#black_jackregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*
+-------------------------------------------------------------------------------------
+2-COMMUN
+-------------------------------------------------------------------------------------
+*/
+
+body{
+	background-color: #eaeaea;
+}
+
+/*CONNEXION*/
+#connexion{
+	color:black;
+	transition-duration: 2s;
+}
+
+#connexion:hover{
+	color:grey;
+}
+
+#attention{
+	font-size: 1.5rem;
+	color:red;
+}
+
+/*MENU PRINCIPAL*/
+#nav-logo{
+	max-width:45px;
+	max-height:40px;	
+	padding-left:5px;
+}
+
+#menu-principal{
+	background-color: black;
+}
+
+#menu-principal-hamburger{
+	background-color: black;
+	display: none;
+}
+
+#navbarToggleExternalContent a{
+	padding-left: 10px;
+}
+
+/*CORPS*/
+#titre-page{
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+#content{
+	background-color: white;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+/*
+-------------------------------------------------------------------------------------
+3-PAGE ACCUEIL
+-------------------------------------------------------------------------------------
+*/
+
+/*jumbotron*/
+#tete{
+	display: flex;
+	flex-direction: column;
+	padding-top:1rem;
+	padding-bottom:2rem;
+	background-image: linear-gradient(rgb(0,0,0),rgba(0,0,0,0.9),rgba(0,0,0,0),rgba(0,0,0,0) ,rgba(0,0,0,0.5),rgb(0,0,0)), url("../images/banner.jpg");
+}
+
+#tete p{
+	color:white;
+}
+
+/*bloc 1/2*/
+#infos-banner{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap:wrap;	
+}
+
+#invitation{
+	margin:auto;
+	margin-bottom: 5px;
+	color:white;
+	transition-duration: 1s;
+	text-shadow: 1px 1px 30px #fff;
+}
+
+#invitation:hover{
+	transform:translateX(10px);
+	-webkit-transform:translateX(10px);		
+	cursor:default;	
+}
+
+#infos-banner h1{
+	color: rgb(223,27,84);
+	padding:20px;
+	transition-duration: 1s;
+	font-family: 'black_jackregular',Arial,serif;
+}
+
+#infos-banner h1:hover{ /* animation titre du slider*/
+	transform:translateX(-10px);
+	-webkit-transform:translateX(-10px);
+	color:rgb(73,184,255);
+	cursor:default;
+}
+
+#infos-banner p.lead{
+
+	background-color: rgba(73,184,255,0.7);
+	padding:10px;
+	transition-duration: 1s;
+	box-shadow: 1px 1px 2px #000;
+}
+
+#infos-banner p.lead:hover{
+	transform:translateX(50px);
+	-webkit-transform:translateX(50px);	
+	color:rgb(223,27,84);
+	cursor:default;
+}
+
+/*bloc 2/2*/
+#support-image{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	box-shadow: 1px 1px 2px #000;
+	background-color: black;
+	transition-duration: 1s;
+}
+
+#support-image:hover{
+	transform:scale(1.1);
+	-webkit-transform:scale(1.05);	
+	cursor:default;
+
+}
+
+/*Image Banner*/
+#image-banner{
+	width:100%;
+}
+
+#tete-description{
+
+	background-color: black;
+	padding:10px;
+	font-style:italic;
+}
+
+/*---------------------------------------------------*/
+
+/*titre de la section 'blocBillets'*/
+#titre-bloc-billets{
+	margin-bottom: 30px;
+	transition-duration: 1s;
+}
+
+#titre-bloc-billets:hover{
+	color:rgb(223,27,84);
+	cursor:default;	
+}
+
+/*images des billets*/
+.cardhome{
+	width:100%;
+}
+
+article .card{
+	box-shadow: 5px 10px 8px #888888;
+}
+
+article .card img{
+	padding:20px;
+}
+
+.titre-card{
+	font-family: 'black_jackregular',Arial,serif;
+	background-color: black;
+}
+
+.carte-article h3 a{
+	color:white; 
+	padding:10px;
+	transition-duration: 1s;
+}
+
+.carte-article h3 a:hover{
+	text-decoration: none;
+	color: rgb(223,27,84);  
+}
+
+.card{
+	border: 1px solid rgba(0,0,0,.125);
+	border-radius: .5rem;
+	transition-duration: 1s;
+	margin-bottom: 30px;
+}
+
+/*animation card*/
+.card:hover{
+	transform:scale(1.05);
+	-webkit-transform:scale(1.05);
+	cursor: default;
+}
+
+.card-body p{
+	text-align: justify;
+}
+
+.bulle{
+	float:right;
+}
+
+.bulle a{
+	text-decoration: none;
+}
+
+/*
+-------------------------------------------------------------------------------------
+4-PAGINATION ARTICLES, TABLEAU ARTICLES, TABLEAU COMMENTAIRES
+-------------------------------------------------------------------------------------
+*/
+/*pagination*/
+#listepagination{
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+	width:96%;
+
+}
+
+#listepagination li{
+	padding:5px;
+	padding-right: 15px;
+	padding-left: 15px;
+	border:1px solid #e1e1e1;
+	border-radius:10%;
+	text-decoration: none;
+}
+
+#listepagination li a{
+	text-decoration: none;
+}
+
+#infoNpages{
+	text-align: center;
+}
+
+/*
+-------------------------------------------------------------------------------------
+5-PAGES ARTICLE ET A PROPOS
+-------------------------------------------------------------------------------------
+*/
+#billet-single, #about-content{
+	padding-top: 20px;
+	margin-right:20px;
+	margin-left:20px;
+}
+
+#billet-single article h1, #about-content h1{
+	background-color: rgb(223,27,84);
+	padding:10px;
+}
+
+#billet-single article h1{
+	transition-duration: 3s;
+}
+
+/*hr entre commentaires*/
+.sep-comments{
+	clear:both;
+	border: 1px #f7f7f7 solid;
+}
+
+.titre-single{
+	background-color: #46d30e;
+	padding:5px;
+	margin-bottom: 20px;
+	transition-duration: 3s;
+}
+
+#billet-single article h1:hover,.titre-single:hover{
+	color:white;
+	cursor: default;
+}
+
+/*vignette*/
+#imgbillet{
+	margin-top: 20px;
+	margin-bottom:20px;
+	text-align: center;
+}
+
+#imgbillet img{
+    max-width: 80%;
+    height: auto;	
+}
+
+/*images dans article*/
+#billet-single article p img{
+	max-width: 100%;
+	height: auto;
+}
+
+/*pagination article*/
+#pagination-article{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap:wrap;
+}
+
+#pagination-article a{
+	padding:10px;
+	text-decoration: none;
+	transition-duration: 1s;
+
+}
+
+#pagination-article a:hover{
+	color:red !important;
+}
+
+.sep-pagination-article{
+	border: 1px #f7f7f7 solid;
+	width:50%;	
+}
+
+/*
+-------------------------------------------------------------------------------------
+6-PAGE A PROPOS ET EDITION A PROPOS
+-------------------------------------------------------------------------------------
+*/
+#avatar{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#avatar-public{
+	max-width:100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+/*
+-------------------------------------------------------------------------------------
+7-PAGES CREATION, EDITION ARTICLE, COMMENTAIRE
+-------------------------------------------------------------------------------------
+*/
+
+#preview img, #previewbanner img, #previewAvatar img, #previewLogo img{
+	max-width:150px;
+	max-height:150px;
+}
+
+#previewFavicon img{
+	max-width:64px;
+	max-height:64px;
+}
+
+/*page d'édition d'article, vignette*/
+#byePreview{
+	display: none;
+}
+
+.titre-edition{
+	padding-top:20px;
+}
+
+.contenu-edition{
+	margin-top: 20px;
+}
+
+/*section commentaire et edition de commentaire, et page accueil*/
+.zone-message{ /*cf bootstrap input*/
+	width: 100%;
+	resize: none;
+	border:1px solid #ced4da;
+	border-radius: .25rem;
+	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+.signaler{
+	float: right;
+}
+
+/*réponse au signalement : */
+/* The snackbar - position it at the bottom and in the middle of the screen */
+.snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+.showsnack {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+   However, delay the fade out process for 2.5 seconds */
+   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+   animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+/*----*/
+#formEditMtp input:required{
+	box-shadow:none;
+}
+
+/*
+-------------------------------------------------------------------------------------
+8-FOOTER
+-------------------------------------------------------------------------------------
+*/
+footer p{
+	text-align:center;
+}
+
+/*
+-------------------------------------------------------------------------------------
+9-BREAKPOINTS
+-------------------------------------------------------------------------------------
+*/
+
+/*576px*/
+@media all and (max-width: 576px){
+	/*menu principal*/
+	#menu-principal{
+		display: none;
+	}
+	#menu-principal-hamburger{
+		display: block;
+	}
+}
+
+/*450px*/
+@media all and (max-width:450px){
+	/*jumbotron page accueil*/
+	#infos-banner p.lead:hover{
+		transform:translateX(10px);
+		-webkit-transform:translateX(10px);	
+	}
+	/*ul pagination*/
+	#listepagination{
+		width:90%;
+	}
+}
+
+/*324px*/
+@media all and (max-width: 324px){
+	/*ul pagination*/
+	#listepagination{
+		width:85%;
+	}
+}
