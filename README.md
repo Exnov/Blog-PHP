@@ -1,4 +1,4 @@
-# p4
+# Blog PHP
 Application de blog simple en PHP avec une base de données MySQL, et à partir de laquelle un écrivain publie les épisodes de son prochain roman. 
 
 ## Spécificités de l'application
